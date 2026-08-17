@@ -25,16 +25,25 @@ docs/specs/<fase-N>/task.md         atomic task breakdown (how, derived from DEV
   shortcuts); `PRD.md` is product-level.
 - Each doc carries a status line (e.g. `Estado: borrador v1`, `definido`,
   `planificado`). Keep this convention for new docs.
-- Fase 1 (`fase-1/`) is fully defined (`DEV-FASE-1.md`) and planned (`task.md`).
-  Fase 2 (`fase-2/`) exists only as empty stub files — fill them following the
-  `fase-1/` format when defined.
-- Fase 1 explicitly excludes crypto/storage/CRUD/generator/clipboard/auto-lock
-  (those land in M2+); don't scope business features into fase 1.
+- Fases 1–3 are fully defined (`DEV-FASE-N.md`, `Estado: definido`) and planned
+  (`task.md`, `Estado: planificado`). Fase 4 (M4 Polish: `settings` funcional,
+  change master password, `require_password_on_delete`, final errors/tests/docs) is
+  defined in `DEV-FASE-4.md` but has no `task.md` yet.
+- Each fase maps to one PRD milestone: F1 = skeleton (no business logic),
+  F2 = crypto/storage/CRUD, F3 = UX (generator, search, clipboard, auto-lock),
+  F4 = Polish (config, master password change, final tests/docs). Don't scope
+  features of a later fase into an earlier one; each `DEV-FASE-N.md` §1.2 lists
+  what's excluded.
+- Every task.md repeats the same conventions: no `panic` on any controllable
+  condition, logic as pure functions testable without TTY (UI only draws;
+  decisions live in `app.rs`).
 
 ## Planned stack (for writing specs, not code)
 
 Rust edition 2021+, `ratatui` + `crossterm` (TUI), `argon2` (Argon2id KDF) +
 `chacha20poly1305` (XChaCha20-Poly1305), `rand` `OsRng`, `arboard` clipboard.
-Task docs specify test conventions: modules `mod test_<modulo>`, cases
-`fn <comportamiento>_<condición>`, per-task DoD = `cargo fmt --check`,
-`cargo clippy -- -D warnings`, `cargo test`.
+Crates are introduced per fase: F1 = `crossterm` + `ratatui`; F2 adds
+`argon2`, `chacha20poly1305`, `rand`, `zeroize`, `serde`/`serde_json`, `uuid`,
+`time`; F3 adds `arboard`; F4 adds none. Task docs specify test conventions:
+modules `mod test_<modulo>`, cases `fn <comportamiento>_<condición>`, per-task
+DoD = `cargo fmt --check`, `cargo clippy -- -D warnings`, `cargo test`.
