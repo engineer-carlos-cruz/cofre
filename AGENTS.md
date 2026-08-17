@@ -25,10 +25,8 @@ docs/specs/<fase-N>/task.md         atomic task breakdown (how, derived from DEV
   shortcuts); `PRD.md` is product-level.
 - Each doc carries a status line (e.g. `Estado: borrador v1`, `definido`,
   `planificado`). Keep this convention for new docs.
-- Fases 1–3 are fully defined (`DEV-FASE-N.md`, `Estado: definido`) and planned
-  (`task.md`, `Estado: planificado`). Fase 4 (M4 Polish: `settings` funcional,
-  change master password, `require_password_on_delete`, final errors/tests/docs) is
-  defined in `DEV-FASE-4.md` but has no `task.md` yet.
+- All fases 1–4 are fully defined (`DEV-FASE-N.md`, `Estado: definido`) and
+  planned (`task.md`, `Estado: planificado`).
 - Each fase maps to one PRD milestone: F1 = skeleton (no business logic),
   F2 = crypto/storage/CRUD, F3 = UX (generator, search, clipboard, auto-lock),
   F4 = Polish (config, master password change, final tests/docs). Don't scope
