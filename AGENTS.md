@@ -19,7 +19,11 @@ docs/PRD.md                         product requirements (milestones M1–M4)
 docs/SPEC.md                        technical spec (draft v1)
 docs/specs/<fase-N>/DEV-FASE-N.md   phase definition (what + user stories + DoD)
 docs/specs/<fase-N>/task.md         atomic task breakdown (how, derived from DEV)
+docs/specs/checklist-task.md        global task tracker (aggregates all task.md IDs)
 ```
+
+- `checklist-task.md` is the single tracking list of every `T-*` task across all
+  fases; when task.md files are added/renamed/removed, keep it in sync.
 
 - `SPEC.md` is the technical source of truth (crypto, `.cofre` format, screens,
   shortcuts); `PRD.md` is product-level.
