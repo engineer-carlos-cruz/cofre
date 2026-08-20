@@ -1,0 +1,9 @@
+[package]
+name = "cofre"
+version = "0.1.0"
+edition = "2021"
+description = "Gestor de contraseñas de terminal (TUI) — esqueleto de la fase 1"
+
+[dependencies]
+crossterm = "0.29"
+ratatui = "0.30"
