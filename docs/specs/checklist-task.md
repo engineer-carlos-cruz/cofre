@@ -9,7 +9,7 @@
 ## Fase 1 — Fundación del proyecto (Skeleton)
 
 - [x] T-SK-01 — Crear el crate y la estructura de módulos
-- [ ] T-SK-02 — Esqueleto de `main.rs` (orquestación)
+- [x] T-SK-02 — Esqueleto de `main.rs` (orquestación)
 - [ ] T-ERR-01 — Definir `CofreError` con mensajes legibles
 - [ ] T-ERR-02 — Mapeo de error → exit code
 - [ ] T-TERM-01 — Init: raw mode + alternate screen + cursor oculto
@@ -101,8 +101,8 @@
 
 | Fase | Tareas | Completadas |
 |---|---|---|
-| Fase 1 | 26 | 1/26 |
+| Fase 1 | 26 | 2/26 |
 | Fase 2 | 23 | 0/23 |
 | Fase 3 | 17 | 0/17 |
 | Fase 4 | 11 | 0/11 |
-| **Total** | **77** | **1/77** |
+| **Total** | **77** | **2/77** |

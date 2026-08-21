@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub enum Screen {
     Unlock,
     List,
@@ -13,6 +14,8 @@ pub struct AppState {
 
 impl Default for AppState {
     fn default() -> Self {
-        Self { screen: Screen::Unlock }
+        Self {
+            screen: Screen::Unlock,
+        }
     }
 }
